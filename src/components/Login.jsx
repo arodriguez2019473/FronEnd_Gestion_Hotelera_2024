@@ -8,6 +8,10 @@ import {
     validatePassword,
 } from "../shared/validators";
 import { useLogin } from "../shared/hooks";
+import { FaRegUserCircle } from "react-icons/fa";
+import { CiLock } from "react-icons/ci";
+import {Eye} from "./Eye";
+
 
 export const Login = ({ switchAuthHandler }) => {
     const { login, isLoading } = useLogin();
@@ -67,33 +71,50 @@ export const Login = ({ switchAuthHandler }) => {
     return (
         <div className="login-container">
             <Logo text={'Login Hoteles Kinal'} />
+            <Eye/>
             <form className="auth-form">
-                <Input
-                    field='email'
-                    label='Email'
-                    value={formState.email.value}
-                    onChangeHandler={handleInputValueChange}
-                    type='text'
-                    onBlurHandler={handleInputValidationOnBlur}
-                    showErrorMessage={formState.email.showError}
-                    validationMessage={emailValidationMessage}
-                />
-                <Input
-                    field='password'
-                    label='Password'
-                    value={formState.password.value}
-                    onChangeHandler={handleInputValueChange}
-                    type='password'
-                    onBlurHandler={handleInputValidationOnBlur}
-                    showErrorMessage={formState.password.showError}
-                    validationMessage={passwordValidationMessage}
-                />
+                <div className="input-box">
+                    <Input
+                        field='email'
+                        label='Email'
+                        value={formState.email.value}
+                        onChangeHandler={handleInputValueChange}
+                        type='text'
+                        onBlurHandler={handleInputValidationOnBlur}
+                        showErrorMessage={formState.email.showError}
+                        validationMessage={emailValidationMessage}
+                    />
+                    <FaRegUserCircle className="icon"/>
+                </div>
+                <div className="input-box">
+                    <Input
+                        field='password'
+                        label='Password'
+                        value={formState.password.value}
+                        onChangeHandler={handleInputValueChange}
+                        type='password'
+                        onBlurHandler={handleInputValidationOnBlur}
+                        showErrorMessage={formState.password.showError}
+                        validationMessage={passwordValidationMessage}
+                        className={formState.email.showError ? 'error' : ''}
+                    />
+                    <CiLock className="icon"/>
+                </div>
+                <div className="remember-forgot">
+                    <label htmlFor="">
+                        <input type="checkbox" /> Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
                 <button onClick={handleLogin} disabled={isSubmitButtonDisabled}>
-                    Log in
+                    Login
                 </button>
+                <dir className="register-link">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </dir>
             </form>
             <span onClick={switchAuthHandler} className="auth-form-switch-label">
-                ¿Aún no tienes una cuenta? ¡Registrate...!
+                Do not you have an account yet? Sign up...!
             </span>
         </div>
     );
