@@ -19,10 +19,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/src/assets/img/playa.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-image: url('/src/assets/img/campo-mobile.jpg');
+}
+
+/* Media query para pantallas más pequeñas, como dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url('/src/assets/img/campo-mobile.jpg');
+  }
 }
 
 code {
