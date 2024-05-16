@@ -113,9 +113,6 @@ export const Login = ({ switchAuthHandler }) => {
                 <button onClick={handleLogin} disabled={isSubmitButtonDisabled}>
                     Login
                 </button>
-                <dir className="register-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
-                </dir>
             </form>
             <span onClick={switchAuthHandler} className="auth-form-switch-label">
                 Do not you have an account yet? Sign up...!
