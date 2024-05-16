@@ -1,0 +1,40 @@
+.nav-container {
+    background-color: #fff;
+    height: 6%;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 80%;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.nav-container button {
+    padding: 8px 16px;
+    font-size: 16px; /* Cambiar a una unidad relativa */
+    font-family: fantasy;
+    color: #5025DB;
+    background-color: #fff;
+    border: 1px solid #5025DB;
+    border-radius: 3vh;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.nav-container button:hover {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: fantasy;
+    color: #fff;
+    box-shadow: 0 0 10px #5025DB, 0 0 40px #5025DB, 0 0 80px #5025DB;
+    background-color: #5025DB;
+    border: 1px solid #0BC64E;
+    border-radius: 3vh;
+    overflow: hidden;
+    transition-delay: 0.6s;
+}
