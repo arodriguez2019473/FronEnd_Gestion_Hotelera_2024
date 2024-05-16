@@ -8,12 +8,13 @@ import {
     validatePassword,
 } from "../shared/validators";
 import { useLogin } from "../shared/hooks";
+import { Link } from "react-router-dom";
 
-export const Login = ({ switchAuthHandler }) => {
+export const Login = () => {
     const { login, isLoading } = useLogin();
 
     const [formState, setFormState] = useState({
-        email: {
+        correo: {
             value: "",
             isValid: false,
             showError: false,
@@ -38,7 +39,7 @@ export const Login = ({ switchAuthHandler }) => {
     const handleInputValidationOnBlur = (value, field) => {
         let isValid = false;
         switch (field) {
-            case "email":
+            case "correo":
                 isValid = validateEmail(value);
                 break;
             case "password":
@@ -60,22 +61,22 @@ export const Login = ({ switchAuthHandler }) => {
     const handleLogin = (event) => {
         event.preventDefault()
 
-        login(formState.email.value, formState.password.value)
+        login(formState.correo.value, formState.password.value)
     }
 
-    const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.email.isValid
+    const isSubmitButtonDisabled = isLoading || !formState.password.isValid || !formState.correo.isValid
     return (
         <div className="login-container">
             <Logo text={'Login Hoteles Kinal'} />
             <form className="auth-form">
                 <Input
-                    field='email'
+                    field='correo'
                     label='Email'
-                    value={formState.email.value}
+                    value={formState.correo.value}
                     onChangeHandler={handleInputValueChange}
                     type='text'
                     onBlurHandler={handleInputValidationOnBlur}
-                    showErrorMessage={formState.email.showError}
+                    showErrorMessage={formState.correo.showError}
                     validationMessage={emailValidationMessage}
                 />
                 <Input
@@ -92,9 +93,7 @@ export const Login = ({ switchAuthHandler }) => {
                     Log in
                 </button>
             </form>
-            <span onClick={switchAuthHandler} className="auth-form-switch-label">
-                ¿Aún no tienes una cuenta? ¡Registrate...!
-            </span>
+            <Link to={`/register`}>Aun no tienes una cuenta, registrate</Link>
         </div>
     );
 };

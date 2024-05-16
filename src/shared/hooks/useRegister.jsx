@@ -8,27 +8,16 @@ export const useRegister = () => {
 
     const navigate = useNavigate()
 
-    const register = async(email, password, username) =>{
+    const register = async(nombre, correo, password, ) =>{
         setIsLoading(true)
 
         const response = await registerRequest({
-            email,
-            password,
-            username
+            correo,
+            nombre,
+            password
         })
 
-        setIsLoading(false)
-        if(response.error){
-            return toast.error(
-                response.e?.response?.data || 'Ocurrió un error al iniciar sesión'
-            )
-        }
-
-        const { userDetails } = response.data
-
-        localStorage.setItem('user', JSON.stringify(userDetails))
-
-        navigate('/')
+        navigate('/auth')
     }
     return {
         register,

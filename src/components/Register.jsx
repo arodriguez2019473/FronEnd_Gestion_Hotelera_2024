@@ -12,17 +12,18 @@ import {
     validatePassword,
 } from "../shared/validators";
 import { useRegister } from "../shared/hooks";
+import { Link } from "react-router-dom";
 
-export const Register = ({ switchAuthHandler }) => {
+export const Register = () => {
     const { register, isLoading } = useRegister();
 
     const [formState, setFormState] = useState({
-        email: {
+        nombre: {
             value: "",
             isValid: false,
             showError: false,
         },
-        username: {
+        correo: {
             value: "",
             isValid: false,
             showError: false,
@@ -52,11 +53,11 @@ export const Register = ({ switchAuthHandler }) => {
     const handleInputValidationOnBlur = (value, field) => {
         let isValid = false;
         switch (field) {
-            case "email":
-                isValid = validateEmail(value);
-                break;
-            case "username":
+            case "nombre":
                 isValid = validateUsername(value);
+                break;
+            case "correo":
+                isValid = validateEmail(value);
                 break;
             case "password":
                 isValid = validatePassword(value);
@@ -79,19 +80,19 @@ export const Register = ({ switchAuthHandler }) => {
 
     const handleRegister = (event) => {
         event.preventDefault();
-        console.log(formState)
+        console.log(formState, "asd")
         register(
-            formState.email.value,
+            formState.nombre.value,
+            formState.correo.value,
             formState.password.value,
-            formState.username.value
         );
     };
 
     const isSubmitButtonDisabled =
         isLoading ||
         !formState.password.isValid ||
-        !formState.email.isValid ||
-        !formState.username.isValid ||
+        !formState.correo.isValid ||
+        !formState.nombre.isValid ||
         !formState.passwordConfir.isValid;
 
     return (
@@ -99,24 +100,24 @@ export const Register = ({ switchAuthHandler }) => {
             <Logo text={"Register to Kinal Cast"} />
             <form className="auth-form">
                 <Input
-                    field="email"
-                    label="Email"
-                    value={formState.email.value}
+                    field="nombre"
+                    label="Username"
+                    value={formState.nombre.value}
                     onChangeHandler={handleInputValueChange}
                     type="text"
                     onBlurHandler={handleInputValidationOnBlur}
-                    showErrorMessage={formState.email.showError}
-                    validationMessage={emailValidationMessage}
+                    showErrorMessage={formState.correo.showError}
+                    validationMessage={validateUsernameMessage}
                 />
                 <Input
-                    field="username"
-                    label="Username"
-                    value={formState.username.value}
+                    field="correo"
+                    label="Email"
+                    value={formState.correo.value}
                     onChangeHandler={handleInputValueChange}
                     type="text"
                     onBlurHandler={handleInputValidationOnBlur}
-                    showErrorMessage={formState.username.showError}
-                    validationMessage={validateUsernameMessage}
+                    showErrorMessage={formState.correo.showError}
+                    validationMessage={emailValidationMessage}
                 />
                 <Input
                     field="password"
@@ -142,9 +143,9 @@ export const Register = ({ switchAuthHandler }) => {
                     Register
                 </button>
             </form>
-            <span onClick={switchAuthHandler} className="auth-form-switch-label">
+            <Link to={`/auth`}>
                 ¿Ya tienes una cuenta? ¡Inicia sesión acá...!
-            </span>
+            </Link>
         </div>
     );
 };

@@ -8,18 +8,18 @@ export const useLogin = () => {
 
     const navigate = useNavigate()
 
-    const login = async (email, password) => {
+    const login = async (correo, password) => {
         setIsLoading(true)
 
         const response = await loginRequest({
-            email,
+            correo,
             password
         })
 
         setIsLoading(false)
         if (response.error) {
             return toast.error(
-                response.e?.response?.data || 'Ocurrió un erro al iniciar sesión'
+                response.e?.response?.data || 'Ocurrió un error al iniciar sesión'
             )
         }
 
@@ -27,7 +27,8 @@ export const useLogin = () => {
 
         localStorage.setItem('user', JSON.stringify(userDetails))
 
-        navigate('/')
+        console.log({ userDetails }, "oaUser")
+        navigate('/dash')
     }
     return {
         login,

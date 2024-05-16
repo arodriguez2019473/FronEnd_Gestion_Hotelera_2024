@@ -6,7 +6,7 @@ export const App = () => {
   let element = useRoutes(routes);
   return (
     <>
-      {element}
+      {element }
       <Toaster position="bottom-right" reverseOrder={false} />
     </>
   );

@@ -1,5 +1,4 @@
 import logo from '../assets/img/Logo.png'
-import '../pages/auth/authPage.css'
 
 export const Logo = ({ text }) => {
     return (
