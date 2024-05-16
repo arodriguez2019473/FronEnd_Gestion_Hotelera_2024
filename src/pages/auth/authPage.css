@@ -37,7 +37,7 @@ img{
     height: auto;
     box-shadow: 10px 10px 10px #000;
     padding: 25px;
-    color: rgb(148, 11, 148);
+    color: #5025DB;
     justify-content: center;
 }
 
@@ -68,8 +68,8 @@ label{
 
 .input-box input {
         text-align: left;
-        border: 2px solid rgb(148, 11, 148);
-        color: rgb(148, 11, 148);
+        border: 2px solid #5025DB;
+        color: #5025DB;
         border-radius: 40px;
         margin: 1vh;
         width: 60%;
@@ -79,8 +79,8 @@ label{
 }
 
 .input-box input:hover{
-    border: 2px solid rgb(13, 182, 19);
-    color: rgb(13, 182, 19);
+    border: 2px solid #0BC64E;
+    color: #0BC64E;
 }
 
 .input-box .icon{
@@ -88,7 +88,7 @@ label{
     transform: translatex(-10%);
     top: 50%;
     transform: translateY(80%);
-    color: rgb(148, 11, 148);
+    color: #5025DB;
 }
 
 .login-container .remember-forgot{
@@ -115,7 +115,7 @@ label{
 
 .auth-form button {
     cursor: pointer;
-    background-color: rgb(13, 182, 19);
+    background-color: #0BC64E;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -143,7 +143,7 @@ label{
 .auth-form-logo-container {
     font-size: 26px;
     font-weight: bold;
-    color: rgb(148, 11, 148);
+    color: #5025DB;
 }
 
 .auth-form-switch-label {
