@@ -4,10 +4,12 @@ import imageEdificios from '../../assets/img/hotel-7885138_1280.jpg';
 import imagenHAbitacion from '../../assets/img/habitacion.jpg'
 import imagenBahia from '../../assets/img/Bahia.jpg'
 import imagenCampo from '../../assets/img/campo-mobile.jpg'
+import { Navbar } from '../../components/Navbar';
 
 export const DashboardPage = () => {
     return (
         <div className="dashboard-container">
+            <Navbar/>
             <ul>
                 <li>
                     <img src={imagenCiudad} alt="" />
