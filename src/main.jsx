@@ -8,6 +8,6 @@ import { AuthPage } from './pages/auth/AuthPage.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <AuthPage/>
+    <DashboardPage/>
   </BrowserRouter>,
 )
