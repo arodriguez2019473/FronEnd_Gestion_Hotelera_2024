@@ -16,8 +16,8 @@
 
 .nav-container button {
     padding: 8px 16px;
-    font-size: 16px; /* Cambiar a una unidad relativa */
-    font-family: fantasy;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     color: #5025DB;
     background-color: #fff;
     border: 1px solid #5025DB;
