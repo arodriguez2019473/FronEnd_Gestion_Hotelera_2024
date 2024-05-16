@@ -82,9 +82,11 @@ export const Login = ({ switchAuthHandler }) => {
                         type='text'
                         onBlurHandler={handleInputValidationOnBlur}
                         showErrorMessage={formState.email.showError}
-                        validationMessage={emailValidationMessage}
                     />
                     <FaRegUserCircle className="icon"/>
+                    {formState.password.showError && (
+                        <span className="error-message">{emailValidationMessage}</span>
+                    )}
                 </div>
                 <div className="input-box">
                     <Input
@@ -95,10 +97,12 @@ export const Login = ({ switchAuthHandler }) => {
                         type='password'
                         onBlurHandler={handleInputValidationOnBlur}
                         showErrorMessage={formState.password.showError}
-                        validationMessage={passwordValidationMessage}
                         className={formState.email.showError ? 'error' : ''}
                     />
                     <CiLock className="icon"/>
+                    {formState.password.showError && (
+                        <span className="error-message">{passwordValidationMessage}</span>
+                    )}
                 </div>
                 <div className="remember-forgot">
                     <label htmlFor="">
