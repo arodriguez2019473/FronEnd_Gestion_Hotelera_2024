@@ -9,6 +9,7 @@ import {
 } from "../shared/validators";
 import { useLogin } from "../shared/hooks";
 import { Link } from "react-router-dom";
+import '../css/login.css'
 
 export const Login = () => {
     const { login, isLoading } = useLogin();

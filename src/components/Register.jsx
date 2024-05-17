@@ -13,6 +13,7 @@ import {
 } from "../shared/validators";
 import { useRegister } from "../shared/hooks";
 import { Link } from "react-router-dom";
+import '../css/login.css'
 
 export const Register = () => {
     const { register, isLoading } = useRegister();
