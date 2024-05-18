@@ -14,15 +14,21 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   background-image: url('/src/assets/img/campo-mobile.jpg');
+  animation: backgroundChange 30s infinite linear;
+}
+
+@keyframes backgroundChange {
+  0%, 15% { background-image: url('/src/assets/img/campo-mobile.jpg'); }
+  20%, 40% { background-image: url('/src/assets/img/ciudad.jpg'); }
+  45%, 65% { background-image: url('/src/assets/img/hotel-7885138_1280.jpg'); }
+  70%, 100% { background-image: url('/src/assets/img/habitacion.jpg'); }
 }
 
 /* Media query para pantallas más pequeñas, como dispositivos móviles */
