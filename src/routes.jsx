@@ -1,9 +1,11 @@
-import { DashboardPage } from "./pages/dashboard";
-import { AuthPage } from "./pages/auth";
+import  {DashboardPage} from "./pages/dashboard/DashboardPage.jsx";
+import { AuthPage } from "./pages/auth/AuthPage.jsx";
+import {HotelPage} from "./pages/hotel/HotelPage.jsx";
 
 const routes = [
     { path: '/auth', element: <AuthPage /> },
-    { path: '/*', element: <DashboardPage /> }
+   { path: '/hoteles', element: <HotelPage /> },
+    { path: '/', element: <DashboardPage /> }
 ]
 
-export default routes
+export default routes;

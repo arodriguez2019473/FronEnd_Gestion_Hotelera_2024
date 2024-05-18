@@ -43,3 +43,18 @@ export const register = async (data) => {
         }
     }
 }
+
+export const hotel = async (data) => {
+    try {
+            return await apiClient.post('/hotel/', data)
+
+    } 
+    catch (e) {
+
+            return {
+                error: true,   
+                e
+            }
+
+    }
+}
