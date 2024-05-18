@@ -17,6 +17,7 @@ header {
 
 .logo img {
     height: 40px;
+    src: url(./1.png);
 }
 
 nav ul {
