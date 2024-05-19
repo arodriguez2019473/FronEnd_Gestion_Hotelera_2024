@@ -50,10 +50,12 @@ export const HotelPage = () => {
                     <h1>Hoteles Disponibles</h1>
                     <SearchBar onSearch={handleSearch} />
                     <div className="images">
+                    <div className="hotel-list">
                         {filteredHotels.length > 0 ? (
                             filteredHotels.map(hotel => (
                                 <HotelCard
-                                    key={hotel.uid}
+                                    key={hotel._id}
+                                    hotelId={hotel._id}
                                     nameHotel={hotel.nameHotel}
                                     address={hotel.address}
                                     description={hotel.description}
@@ -62,6 +64,7 @@ export const HotelPage = () => {
                         ) : (
                             <p>No hotels available</p>
                         )}
+                    </div>
                     </div>
                     <div className="buttons">
                         <button className="event-button">Planificar Evento</button>

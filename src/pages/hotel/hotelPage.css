@@ -6,6 +6,44 @@ body {
     background-color: #f8f8f8;
 }
 
+.hotel-info {
+    padding: 20px;
+}
+
+.hotel-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hotel-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.hotel-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.detalles {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detalles:hover {
+    background-color: #0056b3;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -87,12 +125,12 @@ main {
     border-radius: 10px;
 }
 
-.hotel-info h1 {
+.room-info h1 {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
-.hotel-info p {
+.room-info p {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
