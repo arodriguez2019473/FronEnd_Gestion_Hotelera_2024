@@ -1,6 +1,13 @@
+import React from 'react';
 import './hotelPage.css';
+import useHotels from '../../shared/hooks/useHotel';
 
 export const HotelPage = () => {
+    const { hotels, loading, error } = useHotels();
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error loading hotels: {error.message}</p>;
+
     return (
         <div>
             <header>
@@ -18,13 +25,19 @@ export const HotelPage = () => {
             </header>
             <main>
                 <section className="hotel-info">
-                    <h1>Barceló Hotel</h1>
-                    <p>Ubicado en la costa tropical, el Hotel Sol y Mar ofrece vistas panorámicas al océano, habitaciones decoradas con elegancia y un ambiente relajado. Disfruta de sus playas privadas, piscinas infinitas y gastronomía gourmet en sus restaurantes frente al mar.</p>
+                    <h1>Hoteles Disponibles</h1>
                     <div className="images">
-                        <img src="./1.jpg" alt="Hotel Image 1" />
-                        <img src="image2.jpg" alt="Hotel Image 2" />
-                        <img src="image3.jpg" alt="Hotel Image 3" />
-                        <img src="image4.jpg" alt="Hotel Image 4" />
+                        {hotels.length > 0 ? (
+                            hotels.map(hotel => (
+                                <div key={hotel.uid} className="hotel-item">
+                                    <h2>{hotel.nameHotel}</h2>
+                                    <p>{hotel.address}</p>
+                                    <p>{hotel.description}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No hotels available</p>
+                        )}
                     </div>
                     <div className="buttons">
                         <button className="event-button">Planificar Evento</button>

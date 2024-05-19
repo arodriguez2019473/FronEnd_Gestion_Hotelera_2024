@@ -15,7 +15,7 @@ export const Navbar = () => {
     };
 
     const handleNavigateHoteles = () => {
-        navigate('/hoteles');
+        navigate('/hotel');
     };
 
     return (
