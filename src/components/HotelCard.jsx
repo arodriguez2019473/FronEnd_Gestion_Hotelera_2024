@@ -2,12 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/HotelCard.css';
 
-const HotelCard = ({ nameHotel, address, description }) => {
+const HotelCard = ({hotelId, nameHotel, address, description }) => {
 
     const navigate = useNavigate();
 
     const handleDetailsClick = () => {
-        navigate(`../room/${nameHotel}`);
+        console.log('hotel',hotelId)
+        navigate(`/room/rooms/${hotelId}`);
     };
 
     return (
