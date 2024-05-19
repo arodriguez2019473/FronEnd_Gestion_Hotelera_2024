@@ -44,17 +44,14 @@ export const register = async (data) => {
     }
 }
 
-export const hotel = async (data) => {
+export const getHotels = async () => {
     try {
-            return await apiClient.post('/hotel/', data)
-
-    } 
-    catch (e) {
-
-            return {
-                error: true,   
-                e
-            }
-
+        const response = await apiClient.get('/hotel/');
+        return response.data;
+    } catch (e) {
+        return {
+            error: true,   
+            e
+        };
     }
-}
+};
