@@ -1,10 +1,12 @@
 import './hotelPage.css';
-
+import {useState, useEffect} from "react";
 export const HotelPage = () => {
+
+        
     return (
         <div>
             <header>
-                <nav>
+                <nav className='navContainter'> 
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Pon tu hotel</a></li>

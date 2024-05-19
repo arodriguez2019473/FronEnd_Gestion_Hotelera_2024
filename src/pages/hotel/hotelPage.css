@@ -17,7 +17,37 @@ header {
 
 .logo img {
     height: 40px;
-    src: url(./1.png);
+    src: url("./Logo.png");
+}
+
+li a {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: fantasy;
+    color: #5025DB;
+    background-color: #fff;
+    border: 1px solid #5025DB;
+    border-radius: 3vh;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+li a {
+    text-decoration: none;
+}
+
+
+.nav-container li a:hover {
+    padding: 5px 10px;
+    font-size: 16px;
+    font-family: fantasy;
+    color: #fff;
+    box-shadow: 0 0 10px #5025DB, 0 0 40px #5025DB, 0 0 80px #5025DB;
+    background-color: #5025DB;
+    border: 1px solid #0BC64E;
+    border-radius: 3vh;
+    overflow: hidden;
+    transition-delay: 0.6s;
 }
 
 nav ul {
@@ -33,8 +63,15 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #000;
+    padding: 8px 16px;
+    font-size: 16px; /* Cambiar a una unidad relativa */
+    font-family: fantasy;
+    color: #5025DB;
+    background-color: #fff;
+    border: 1px solid #5025DB;
+    border-radius: 3vh;
+    overflow: hidden;
+    transition: 0.2s;
 }
 
 .user img {
@@ -86,11 +123,29 @@ main {
 }
 
 .event-button {
-    background-color: #f39200;
+    cursor: pointer;
+    background-color: #0BC64E;
     color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 30px;
+    font-weight: 500;
+    margin-top: 5px;
+    transition: 0.3s;
+    line-height: 10px;
 }
 
 .reserve-button {
-    background-color: #00b140;
+    cursor: pointer;
+    background-color: #5025DB;
     color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    height: 30px;
+    font-weight: 500;
+    margin-top: 5px;
+    transition: 0.3s;
+    line-height: 10px;
 }
