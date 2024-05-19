@@ -43,3 +43,25 @@ export const register = async (data) => {
         }
     }
 }
+
+export const getHotels = async () => {
+    try {
+        const response = await apiClient.get('/hotel/');
+        return response.data;
+    } catch (e) {
+        return {
+            error: true,   
+            e
+        };
+    }
+};
+
+export const getRooms = async (hotelId) => {
+    console.log(hotelId)
+    try {
+        const response = await apiClient.get(`/room/rooms/${hotelId}`);
+        return response.data;
+    } catch (error) {
+        return { error: true, message: error.message };
+    }
+};

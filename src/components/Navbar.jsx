@@ -1,25 +1,29 @@
 import { useNavigate } from "react-router-dom";
-import './css/Navbar.css'
+import './css/Navbar.css';
 import logoImg from "../assets/img/Logo.png";
+import routes from "../routes";
 
 export const Navbar = () => {
-
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleNavigateAboutOut = () => {
-        navigate('/we')
-    }
+        navigate('/we'); 
+    };
 
     const handleNavigateLogin = () => {
-        console.log('/auth')
-        navigate('/auth')
-    }
+        navigate('/auth');
+    };
 
-    return(
+    const handleNavigateHoteles = () => {
+        navigate('/hotel');
+    };
+
+    return (
         <div className="nav-container">
-            <img src={logoImg} alt="" className="logo"/>
-            <button className='nav-button' text='' onClick={handleNavigateAboutOut}>about us</button>
-            <button className='nav-button' text='' onClick={handleNavigateLogin}>Login</button>
+            <img src={logoImg} alt="Logo" className="logo"/>
+            <button className='nav-button' onClick={handleNavigateAboutOut}>About Us</button>
+            <button className='nav-button' onClick={handleNavigateLogin}>Login</button>
+            <button className='nav-button' onClick={handleNavigateHoteles}>Hoteles</button>
         </div>
-    )
+    );
 }
