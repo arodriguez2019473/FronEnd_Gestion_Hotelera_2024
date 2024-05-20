@@ -8,6 +8,7 @@ const routes = [
    { path: '/hotel', element: <HotelPage /> },
     { path: '/', element: <DashboardPage /> },
     { path: '/room/rooms/:hotelId', element: <RoomPage /> }
+
 ]
 
 export default routes;
