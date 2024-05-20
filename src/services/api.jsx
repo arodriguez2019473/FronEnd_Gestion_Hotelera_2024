@@ -36,15 +36,11 @@ export const login = async (data) => {
 export const register = async (data) => {
     console.log('register')
     try {
-<<<<<<< HEAD
-        return await apiClient.post('/auth/signUp', data)
-=======
         return await apiClient.post('/auth/signUp', {
             correo: data.correo,
             password: data.password,
             nombre: data.username,
         })
->>>>>>> feature/room
     } catch (e) {
         return {
             error: true,
