@@ -20,7 +20,7 @@ const HotelCard = ({hotelId, imgUrl, nameHotel, address, description }) => {
                 <h2 className="hotel-name">{nameHotel}</h2>
                 <p className="hotel-address">{address}</p>
                 <p className="hotel-description">{description}</p>
-                <button onClick={handleDetailsClick} className='detalles'>Ver detalles</button>
+                <button onClick={handleDetailsClick} className='detalles'>Reservar</button>
             </div>
         </div>
     );
