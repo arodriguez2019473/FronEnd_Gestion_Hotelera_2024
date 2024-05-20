@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/RoomCard.css';
 
-const RoomCard = ({ hotel, address, description, peopleCapacity, priceRoom, typeRoom }) => {
+const RoomCard = ({ hotel, imgUrl , address, description, peopleCapacity, priceRoom, typeRoom }) => {
 
     console.log(priceRoom);
     const verMas = () => {
@@ -11,6 +11,9 @@ const RoomCard = ({ hotel, address, description, peopleCapacity, priceRoom, type
     return (
         <div className="room-card">
             <div className="room-info">
+                <div className="image-container">
+                    <img src={imgUrl} alt={`${address}`} className="room-image" />
+                </div>
                 <h2 className="room-name">{hotel}</h2>
                 <p className="room-address">{address}</p>
                 <p className="room-description">{description}</p>

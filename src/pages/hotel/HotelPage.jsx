@@ -56,6 +56,7 @@ export const HotelPage = () => {
                                 <HotelCard
                                     key={hotel._id}
                                     hotelId={hotel._id}
+                                    imgUrl={hotel.imgUrl}
                                     nameHotel={hotel.nameHotel}
                                     address={hotel.address}
                                     description={hotel.description}
