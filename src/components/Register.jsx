@@ -17,7 +17,7 @@ export const Register = ({ switchAuthHandler }) => {
     const { register, isLoading } = useRegister();
 
     const [formState, setFormState] = useState({
-        email: {
+        correo: {
             value: "",
             isValid: false,
             showError: false,
@@ -52,7 +52,7 @@ export const Register = ({ switchAuthHandler }) => {
     const handleInputValidationOnBlur = (value, field) => {
         let isValid = false;
         switch (field) {
-            case "email":
+            case "correo":
                 isValid = validateEmail(value);
                 break;
             case "username":
@@ -81,7 +81,7 @@ export const Register = ({ switchAuthHandler }) => {
         event.preventDefault();
         console.log(formState)
         register(
-            formState.email.value,
+            formState.correo.value,
             formState.password.value,
             formState.username.value
         );
@@ -90,7 +90,7 @@ export const Register = ({ switchAuthHandler }) => {
     const isSubmitButtonDisabled =
         isLoading ||
         !formState.password.isValid ||
-        !formState.email.isValid ||
+        !formState.correo.isValid ||
         !formState.username.isValid ||
         !formState.passwordConfir.isValid;
 
@@ -99,13 +99,13 @@ export const Register = ({ switchAuthHandler }) => {
             <Logo text={"Register to Kinal Cast"} />
             <form className="auth-form">
                 <Input
-                    field="email"
-                    label="Email"
-                    value={formState.email.value}
+                    field="correo"
+                    label="Correo"
+                    value={formState.correo.value}
                     onChangeHandler={handleInputValueChange}
                     type="text"
                     onBlurHandler={handleInputValidationOnBlur}
-                    showErrorMessage={formState.email.showError}
+                    showErrorMessage={formState.correo.showError}
                     validationMessage={emailValidationMessage}
                 />
                 <Input
@@ -123,7 +123,7 @@ export const Register = ({ switchAuthHandler }) => {
                     label="Password"
                     value={formState.password.value}
                     onChangeHandler={handleInputValueChange}
-                    type="text"
+                    type="password"
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.password.showError}
                     validationMessage={passwordValidationMessage}
@@ -133,7 +133,7 @@ export const Register = ({ switchAuthHandler }) => {
                     label="Password Confirmation"
                     value={formState.passwordConfir.value}
                     onChangeHandler={handleInputValueChange}
-                    type="text"
+                    type="password"
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.passwordConfir.showError}
                     validationMessage={passwordConfirmationMessage}
