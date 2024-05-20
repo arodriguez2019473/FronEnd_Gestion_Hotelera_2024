@@ -13,6 +13,18 @@
     transform: scale(1.05);
 }
 
+.image-container {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.room-image {
+    width: 100%;
+    height: auto;
+}
+
+
 .room-image {
     width: 100%;
     height: 200px;
@@ -49,6 +61,10 @@
     font-size: 1em;
     color: #5025DB;
     margin: 8px 0;
+}
+
+p{
+    color: #5025DB;
 }
 
 .room-description {
