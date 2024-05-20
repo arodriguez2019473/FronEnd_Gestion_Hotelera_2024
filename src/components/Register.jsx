@@ -123,7 +123,7 @@ export const Register = ({ switchAuthHandler }) => {
                     label="Password"
                     value={formState.password.value}
                     onChangeHandler={handleInputValueChange}
-                    type="text"
+                    type="password"
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.password.showError}
                     validationMessage={passwordValidationMessage}
@@ -133,7 +133,7 @@ export const Register = ({ switchAuthHandler }) => {
                     label="Password Confirmation"
                     value={formState.passwordConfir.value}
                     onChangeHandler={handleInputValueChange}
-                    type="text"
+                    type="password"
                     onBlurHandler={handleInputValidationOnBlur}
                     showErrorMessage={formState.passwordConfir.showError}
                     validationMessage={passwordConfirmationMessage}
