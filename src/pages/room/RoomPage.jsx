@@ -61,6 +61,7 @@ const RoomPage = () => {
                             <RoomCard
                                 key={room._id}
                                 hotelId={room.hotel}
+                                imgUrl={room.imgUrl}
                                 address={room.address}
                                 description={room.description}
                                 peopleCapacity={room.peopleCapacity}
