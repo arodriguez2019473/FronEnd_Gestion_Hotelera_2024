@@ -22,7 +22,6 @@ const useHotel = () => {
         fetchHotels();
     }, []);
 
-    console.log('hook - hotels', hotels);
     return { hotels, loading, error };
 };
 
