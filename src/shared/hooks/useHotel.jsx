@@ -13,14 +13,16 @@ const useHotel = () => {
                 setError(result.e);
                 setLoading(false);
             } else {
-                setHotels(result.hoteles || []); 
+                setHotels(result.hoteles || []);
                 setLoading(false);
+                console.log('Hoteles obtenidos con éxito:', result.hoteles);
             }
         };
 
         fetchHotels();
     }, []);
 
+    console.log('hook - hotels', hotels);
     return { hotels, loading, error };
 };
 
