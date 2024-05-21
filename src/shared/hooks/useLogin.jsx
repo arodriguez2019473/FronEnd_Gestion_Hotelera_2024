@@ -12,7 +12,7 @@ export const useLogin = () => {
         setIsLoading(true)
 
         const response = await loginRequest({
-            email,
+            correo: email,
             password
         })
 
