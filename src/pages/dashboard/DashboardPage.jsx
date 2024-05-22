@@ -5,11 +5,32 @@ import imagenHAbitacion from '../../assets/img/habitacion.jpg'
 import imagenBahia from '../../assets/img/Bahia.jpg'
 import imagenCampo from '../../assets/img/campo-mobile.jpg'
 import { Navbar } from '../../components/Navbar';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const DashboardPage = () => {
+
+    const [userEmail, setUserEmail] = useState("");
+
+    const location = useLocation();
+    console.log('usuario',userEmail)
+    useEffect(() => {
+        const { state } = location;
+        if (state && state.email) {
+            setUserEmail(state.email);
+        } else {
+            const storedEmail = localStorage.getItem('userEmail');
+            if (storedEmail) {
+                setUserEmail(storedEmail);
+            }
+        }
+    }, [location]);
+
+    console.log('usuario',userEmail)
+
     return (
         <div className="dashboard-container">
-            <Navbar/>
+            <Navbar userEmail={userEmail} />
             <ul>
                 <li>
                     <img src={imagenCiudad} alt="" />
