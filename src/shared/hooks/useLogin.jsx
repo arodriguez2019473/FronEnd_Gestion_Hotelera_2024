@@ -25,9 +25,11 @@ export const useLogin = () => {
 
         const { userDetails } = response.data
 
-        localStorage.setItem('user', JSON.stringify(userDetails))
+        localStorage.setItem('userEmail', userDetails.correo);
 
-        navigate('/')
+        console.log(email)
+
+        navigate('/', { state: { email } });
     }
     return {
         login,

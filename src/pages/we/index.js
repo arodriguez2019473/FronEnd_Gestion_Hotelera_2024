@@ -1,0 +1,1 @@
+export { WePages } from "./We";

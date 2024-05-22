@@ -95,6 +95,17 @@ export const getRooms = async (hotelId) => {
     }
 };
 
+export const getEventsByDate = async (date) => {
+    try {
+        const response = await apiClient.get('/event', {
+            params: { date }
+        });
+        return response.data;
+    } catch (error) {
+        return { error: true, message: error.message };
+    }
+};
+
 
 export const agregarReserva = async (data) =>{
     console.log(data)
@@ -105,6 +116,8 @@ export const agregarReserva = async (data) =>{
         
     }
 }
+
+
 
 export const getService = async () =>{
     try {
