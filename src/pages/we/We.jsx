@@ -1,5 +1,6 @@
 import React from 'react';
-import './aboutUsPage.css';
+import './We.css';
+import { Link } from 'react-router-dom';
 
 export const We = () => {
     return (
@@ -7,7 +8,7 @@ export const We = () => {
             <header>
                 <nav className='navContainer'> 
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><a href="#">Pon tu hotel</a></li>
                         <li><a href="#">Experiencias</a></li>
                         <li><a href="#">Contáctanos</a></li>
@@ -25,7 +26,7 @@ export const We = () => {
                     <div className="team">
                         <div className="team-member">
                             <img src="./developer1.jpg" alt="Developer 1" />
-                            <h3>Juan Pérez</h3>
+                            <h3>José Jiménez-2022152</h3>
                             <p>Desarrollador Front-End apasionado por crear interfaces de usuario intuitivas y atractivas.</p>
                         </div>
                         <div className="team-member">
@@ -37,6 +38,16 @@ export const We = () => {
                             <img src="./developer3.jpg" alt="Developer 3" />
                             <h3>Carlos López</h3>
                             <p>Diseñador UX/UI enfocado en mejorar la experiencia del usuario a través de diseños efectivos y atractivos.</p>
+                        </div>
+                        <div className="team-member">
+                            <img src="./developer4.jpg" alt="Developer 4" />
+                            <h3>Laura Martínez</h3>
+                            <p>Ingeniera de DevOps dedicada a la automatización de procesos y la mejora continua del flujo de trabajo.</p>
+                        </div>
+                        <div className="team-member">
+                            <img src="./developer5.jpg" alt="Developer 5" />
+                            <h3>Pedro González</h3>
+                            <p>Especialista en ciberseguridad con enfoque en la protección de datos y la seguridad de las aplicaciones.</p>
                         </div>
                     </div>
                     <h2>Nuestra Misión</h2>
