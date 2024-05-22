@@ -21,7 +21,10 @@ export const We = () => {
             <main>
                 <section className="about-us">
                     <h1>Sobre Nosotros</h1>
-                    <p>Bienvenidos a nuestro sitio web de reservas de hoteles. Nuestro objetivo es ofrecerte la mejor experiencia de búsqueda y reserva de alojamiento, brindándote una amplia variedad de opciones y un servicio de atención al cliente de primera.</p>
+                    <p>Bienvenidos a nuestro sitio web de reservas de hoteles. Nuestro objetivo es ofrecerte la 
+                        mejor experiencia de búsqueda y reserva de alojamiento, brindándote una amplia variedad de 
+                        opciones y un servicio de atención al cliente de primera. Al igual que permitirte volver tu espacio
+                        tu propio hotel para que puedas generar un recusro economico extra.</p>
                     <h2>Nuestro Equipo</h2>
                     <div className="team">
                         <div className="team-member">
@@ -45,14 +48,19 @@ export const We = () => {
                             </p>
                         </div>
                         <div className="team-member">
-                            <img src="./developer4.jpg" alt="Developer 4" />
-                            <h3>Laura Martínez</h3>
-                            <p>Ingeniera de DevOps dedicada a la automatización de procesos y la mejora continua del flujo de trabajo.</p>
+                            <img src="https://raw.githubusercontent.com/jjimenez2022152/Laboratorio-2-Api-Mascotas/df0062f6a75292eb66cb39992950375a5d4a8091/models/pelos.jpeg" alt="Developer 4" />
+                            <h3>Auke Sey</h3>
+                            <p>Scrum Master de este proyecto, empleando sus conocimientos sobre esta metodologia para crear la mejor
+                                experiencia posible tanto para el equipo de trabajo como los usuarios, dando sus conocimientos en el area de
+                                Front-End
+                            </p>
                         </div>
                         <div className="team-member">
-                            <img src="./developer5.jpg" alt="Developer 5" />
-                            <h3>Pedro González</h3>
-                            <p>Especialista en ciberseguridad con enfoque en la protección de datos y la seguridad de las aplicaciones.</p>
+                            <img src="https://raw.githubusercontent.com/jjimenez2022152/Laboratorio-2-Api-Mascotas/df0062f6a75292eb66cb39992950375a5d4a8091/models/herlin.jpg" alt="Developer 5" />
+                            <h3>Herlin Gomez</h3>
+                            <p>Gran diseñador, el cual implmenta muy bien caracteristicas para que el usuario se sienta comodo
+                                con el uso del aplicativo, brindo suapoyo con css y muchos mas apartados del lado Front-End.
+                            </p>
                         </div>
                     </div>
                     <h2>Nuestra Misión</h2>
