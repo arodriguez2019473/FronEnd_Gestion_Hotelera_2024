@@ -25,19 +25,24 @@ export const We = () => {
                     <h2>Nuestro Equipo</h2>
                     <div className="team">
                         <div className="team-member">
-                            <img src="./developer1.jpg" alt="Developer 1" />
+                            <img src="https://github.com/jjimenez2022152/Laboratorio-2-Api-Mascotas/blob/main/models/xetululYo2.jpg?raw=true" alt="Developer 1" />
                             <h3>José Jiménez-2022152</h3>
-                            <p>Desarrollador Front-End apasionado por crear interfaces de usuario intuitivas y atractivas.</p>
+                            <p>Desarrollador el cual apoyo en Front-End 
+                                y Backe-End, apoyando mayoritariamente en la logica de entidades
+                                como el Login y Register, Hoteles, Cuartos, etc</p>
                         </div>
                         <div className="team-member">
-                            <img src="./developer2.jpg" alt="Developer 2" />
-                            <h3>María García</h3>
-                            <p>Desarrolladora Back-End especializada en la creación de aplicaciones robustas y escalables.</p>
+                            <img src="https://raw.githubusercontent.com/jjimenez2022152/Laboratorio-2-Api-Mascotas/608298fb82315862189565dad8422e5730f971c2/models/Yhohan.jpeg" alt="Developer 2" />
+                            <h3>Yojhan Garcia.</h3>
+                            <p>Desarrolladora Back-End especializada en la creación de aplicaciones robustas y escalables,
+                                tambien brindo sus conocimientos en el area Front-End como en el apartado de "Reservacion" entre otros.</p>
                         </div>
                         <div className="team-member">
-                            <img src="./developer3.jpg" alt="Developer 3" />
-                            <h3>Carlos López</h3>
-                            <p>Diseñador UX/UI enfocado en mejorar la experiencia del usuario a través de diseños efectivos y atractivos.</p>
+                            <img src="https://raw.githubusercontent.com/jjimenez2022152/Laboratorio-2-Api-Mascotas/732cac938a54834047b394c0010a41fc73f4014f/models/Gary.jpeg" alt="Developer 3" />
+                            <h3>Gary Galindo</h3>
+                            <p>Programador de alto rendimiento, mayormente orientado a la aprte de Back-End, brindo sus conocimentos emplenado
+                                su logica en areas como, "Reseña, Servicios" y su apoyo en Front-End con algunos componentes
+                            </p>
                         </div>
                         <div className="team-member">
                             <img src="./developer4.jpg" alt="Developer 4" />
