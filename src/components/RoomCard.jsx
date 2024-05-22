@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import './css/RoomCard.css';
+import {Reservation} from '../pages/reservation/Reservation.jsx'
+const RoomCard = ({ hotel, imgUrl, address, description, peopleCapacity, priceRoom, typeRoom }) => {
+    const [showAddReservation, setShowAddReservation] = useState(false);
+    const navigate = useNavigate();
 
-const RoomCard = ({ hotel, imgUrl , address, description, peopleCapacity, priceRoom, typeRoom }) => {
-
-    console.log(priceRoom);
-    const verMas = () => {
-        console.log('hi');
+    const handleToggleAddReservation = () => {
+        setShowAddReservation(!showAddReservation); 
     };
 
     return (
@@ -20,7 +22,16 @@ const RoomCard = ({ hotel, imgUrl , address, description, peopleCapacity, priceR
                 <p className="room-people-capacity">Capacidad: {peopleCapacity} personas</p>
                 <p className="room-price">Precio: ${priceRoom} por noche</p>
                 <p className="room-type">Tipo: {typeRoom}</p>
-                <button onClick={verMas} className='detalles'>Ver detalles</button>
+                {!showAddReservation && (
+                    <button className="add-task-btn" onClick={handleToggleAddReservation}>
+                        Agregar reserva
+                    </button>
+                )}
+                {showAddReservation && (
+                    <div>
+                        <Reservation/>
+                    </div>
+                )}
             </div>
         </div>
     );

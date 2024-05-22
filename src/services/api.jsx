@@ -94,3 +94,25 @@ export const getRooms = async (hotelId) => {
         return { error: true, message: error.message };
     }
 };
+
+
+export const agregarReserva = async (data) =>{
+    console.log(data)
+    try {
+        const response = await apiClient.post('/reservation', data);
+    } catch (error) {
+        return {error: true, message: error.message};
+        
+    }
+}
+
+export const getService = async () =>{
+    try {
+        const response = await apiClient.get('/service')
+    } catch (error) {
+        return {
+            error: true,
+            message: error.message
+        }
+    }
+}

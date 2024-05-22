@@ -1,0 +1,43 @@
+.add-reservation-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    color: black; /* Agregado para hacer que el texto sea negro */
+}
+
+.add-reservation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    color: black; /* Agregado para hacer que el texto sea negro */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-reservation-bt,
+.cancel-reservation-bt {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000; /* Agregado para hacer que el texto sea negro */
+}
+
+.add-reservation-bt {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.cancel-reservation-bt {
+    background-color: #dc3545;
+    color: #fff;
+}
