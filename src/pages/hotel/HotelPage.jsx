@@ -74,7 +74,7 @@ export const HotelPage = () => {
                     </div>
                     </div>
                     <div className="buttons">
-                        <button className="event-button" onClick={reserva}>Planificar Evento</button>
+                        <button className="event-button" onClick={reserva}>Eventos</button>
                         <button className="reserve-button">Reservar</button>
                     </div>
                 </section>
