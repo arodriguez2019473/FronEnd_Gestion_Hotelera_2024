@@ -3,10 +3,12 @@ import './hotelPage.css';
 import useHotels from '../../shared/hooks/useHotel';
 import HotelCard from '../../components/HotelCard';
 import SearchBar from '../../components/SearchBar';
+import { useNavigate } from "react-router-dom";
 import {useState, useEffect} from "react";
 export const HotelPage = () => {
     const { hotels, loading, error } = useHotels();
     const [filteredHotels, setFilteredHotels] = useState([]);
+    const navigate = useNavigate();
 
 
     const handleSearch = (searchTerm) => {
@@ -25,6 +27,10 @@ export const HotelPage = () => {
             setFilteredHotels(hotels);
         }
     }, [hotels]);
+
+    const reserva = () => {
+        navigate('/calendary');
+    };
 
     
     if (loading) return <p>Loading...</p>;
@@ -68,7 +74,7 @@ export const HotelPage = () => {
                     </div>
                     </div>
                     <div className="buttons">
-                        <button className="event-button">Planificar Evento</button>
+                        <button className="event-button" onClick={reserva}>Planificar Evento</button>
                         <button className="reserve-button">Reservar</button>
                     </div>
                 </section>
