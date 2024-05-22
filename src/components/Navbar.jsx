@@ -3,7 +3,7 @@ import './css/Navbar.css';
 import logoImg from "../assets/img/Logo.png";
 import routes from "../routes";
 
-export const Navbar = () => {
+export const Navbar = ({ userEmail }) => {
     const navigate = useNavigate();
 
     const handleNavigateAboutOut = () => {
@@ -25,8 +25,14 @@ export const Navbar = () => {
     return (
         <div className="nav-container">
             <img src={logoImg} alt="Logo" className="logo"/>
+            <button className='nav-button' onClick={handleNavigateLogin}>
+            {userEmail !== 'undefined' ? (
+                <span className="nav-user-email">{userEmail}</span>
+            ) : (
+                "Login"
+            )}
+            </button>
             <button className='nav-button' onClick={handleNavigateAboutOut}>About Us</button>
-            <button className='nav-button' onClick={handleNavigateLogin}>Login</button>
             <button className='nav-button' onClick={handleNavigateHoteles}>Hoteles</button>
             <button className='nav-button' onClick={handleNavigateGraphic}>Graficas</button>
         </div>

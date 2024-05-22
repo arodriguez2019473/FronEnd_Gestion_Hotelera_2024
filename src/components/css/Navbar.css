@@ -38,3 +38,7 @@
     overflow: hidden;
     transition-delay: 0.6s;
 }
+
+.nav-user-email{
+    color: #0BC64E;
+}
