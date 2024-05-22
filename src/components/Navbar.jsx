@@ -18,12 +18,17 @@ export const Navbar = () => {
         navigate('/hotel');
     };
 
+    const handleNavigateGraphic = () => {
+        navigate('/graphic');
+    };
+
     return (
         <div className="nav-container">
             <img src={logoImg} alt="Logo" className="logo"/>
             <button className='nav-button' onClick={handleNavigateAboutOut}>About Us</button>
             <button className='nav-button' onClick={handleNavigateLogin}>Login</button>
             <button className='nav-button' onClick={handleNavigateHoteles}>Hoteles</button>
+            <button className='nav-button' onClick={handleNavigateGraphic}>Graficas</button>
         </div>
     );
 }

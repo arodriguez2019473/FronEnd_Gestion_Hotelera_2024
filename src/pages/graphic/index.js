@@ -1,0 +1,1 @@
+export { GraficaPages } from "./Graphic";
